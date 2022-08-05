@@ -10,4 +10,5 @@ class AppColor {
   static Color lightestBackground = const Color(0xff2B2937);
   static Color primaryText = const Color(0xffE1E1E1);
   static Color secondaryText = const Color(0xff999999);
+  static Color subtitleText = const Color(0xff504F5E);
 }
