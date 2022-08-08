@@ -1,4 +1,4 @@
-part of 'widgets_part.dart';
+part of '../widgets_part.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final String label, iconImgPath, hint;

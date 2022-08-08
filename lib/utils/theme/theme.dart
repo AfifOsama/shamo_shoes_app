@@ -22,6 +22,7 @@ class AppTheme {
     fontWeight: AppTheme.medium,
     fontSize: 12.sp,
   );
+  static TextStyle blackText = GoogleFonts.poppins(color: AppColor.blackText);
 
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;

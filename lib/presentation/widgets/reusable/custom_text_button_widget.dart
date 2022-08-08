@@ -1,4 +1,4 @@
-part of 'widgets_part.dart';
+part of '../widgets_part.dart';
 
 class CustomTextButtonWidget extends StatelessWidget {
   final String label;

@@ -37,11 +37,86 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget _categories() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            SizedBox(
+              width: AppTheme.defaultMargin,
+            ),
+            CategoryWidget(
+              categoryName: "All Shoes",
+              onPressed: () {},
+              isActive: true,
+            ),
+            CategoryWidget(
+              categoryName: "Running",
+              onPressed: () {},
+            ),
+            CategoryWidget(
+              categoryName: "Training",
+              onPressed: () {},
+            ),
+            CategoryWidget(
+              categoryName: "Basketball",
+              onPressed: () {},
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget _popularProductsTitle() {
+      return Padding(
+        padding: EdgeInsets.only(left: AppTheme.defaultMargin, bottom: 14.h),
+        child: Text(
+          "Popular Products",
+          style: AppTheme.primary.copyWith(
+            fontSize: 22.sp,
+            fontWeight: AppTheme.semiBold,
+          ),
+        ),
+      );
+    }
+
+    Widget _popularProducts() {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            SizedBox(
+              width: AppTheme.defaultMargin,
+            ),
+            PopularProductCardWidget(
+                categoryName: "Hiking",
+                productName: "Court Vision 2.0",
+                imgUrl: "assets/images/img_product.png",
+                price: "\$ 58,76"),
+            PopularProductCardWidget(
+                categoryName: "Hiking",
+                productName: "Court Vision 2.0",
+                imgUrl: "assets/images/img_product.png",
+                price: "\$ 58,76"),
+            PopularProductCardWidget(
+                categoryName: "Hiking",
+                productName: "Court Vision 2.0",
+                imgUrl: "assets/images/img_product.png",
+                price: "\$ 58,76"),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: AppColor.darkerBackground,
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
           _header(),
+          _categories(),
+          _popularProductsTitle(),
+          _popularProducts(),
         ],
       ),
     );
