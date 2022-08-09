@@ -89,25 +89,93 @@ class HomePage extends StatelessWidget {
               width: AppTheme.defaultMargin,
             ),
             PopularProductCardWidget(
-                categoryName: "Hiking",
-                productName: "Court Vision 2.0",
-                imgUrl: "assets/images/img_product.png",
-                price: "\$ 58,76"),
+              categoryName: "Hiking",
+              productName: "Court Vision 2.0",
+              imgUrl: "assets/images/img_product.png",
+              price: "\$ 58,76",
+              onPressed: () {},
+            ),
             PopularProductCardWidget(
-                categoryName: "Hiking",
-                productName: "Court Vision 2.0",
-                imgUrl: "assets/images/img_product.png",
-                price: "\$ 58,76"),
+              categoryName: "Hiking",
+              productName: "Court Vision 2.0",
+              imgUrl: "assets/images/img_product.png",
+              price: "\$ 58,76",
+              onPressed: () {},
+            ),
             PopularProductCardWidget(
-                categoryName: "Hiking",
-                productName: "Court Vision 2.0",
-                imgUrl: "assets/images/img_product.png",
-                price: "\$ 58,76"),
+              categoryName: "Hiking",
+              productName: "Court Vision 2.0",
+              imgUrl: "assets/images/img_product.png",
+              price: "\$ 58,76",
+              onPressed: () {},
+            ),
           ],
         ),
       );
     }
 
+    Widget _newArrivalTitle() {
+      return Padding(
+        padding: EdgeInsets.only(
+          top: AppTheme.defaultMargin,
+          right: AppTheme.defaultMargin,
+          left: AppTheme.defaultMargin,
+          bottom: 14.h,
+        ),
+        child: Text(
+          "New Arrivals",
+          style: AppTheme.primary.copyWith(
+            fontSize: 22.sp,
+            fontWeight: AppTheme.semiBold,
+          ),
+        ),
+      );
+    }
+
+    List<Widget> newArrival = [
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+      NewArrivalCardWidget(
+        categoryName: "Football",
+        productName: "Predator 20.3 Firm Ground",
+        imgUrl: "assets/images/img_shoes.png",
+        price: "\$68,47",
+        onPressed: () {},
+      ),
+    ];
     return Scaffold(
       backgroundColor: AppColor.darkerBackground,
       body: ListView(
@@ -117,6 +185,8 @@ class HomePage extends StatelessWidget {
           _categories(),
           _popularProductsTitle(),
           _popularProducts(),
+          _newArrivalTitle(),
+          ...newArrival,
         ],
       ),
     );

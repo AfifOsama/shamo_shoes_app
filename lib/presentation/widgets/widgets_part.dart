@@ -10,3 +10,4 @@ part 'custom_error_widget.dart';
 part 'custom_bottom_navigation_widget.dart';
 part 'category_widget.dart';
 part 'popular_product_card_widget.dart';
+part 'new_arrival_card_widget.dart';
