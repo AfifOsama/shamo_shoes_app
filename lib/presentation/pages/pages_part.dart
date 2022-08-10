@@ -15,3 +15,4 @@ part 'chat/chat_page.dart';
 part 'profile/profile_page.dart';
 part 'wishlist/wishlist_page.dart';
 part 'home/home_page.dart';
+part 'chat/detail_chat_page.dart';

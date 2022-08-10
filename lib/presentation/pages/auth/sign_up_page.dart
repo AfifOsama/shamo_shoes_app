@@ -77,25 +77,6 @@ class SignUpPage extends StatelessWidget {
       ),
     ];
 
-    Widget _footer() {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Don't have an account? ",
-            style: AppTheme.subtitle.copyWith(fontSize: 12.sp),
-          ),
-          GestureDetector(
-            onTap: () => Get.back(),
-            child: Text(
-              "Sign in",
-              style: AppTheme.hightlightedText,
-            ),
-          )
-        ],
-      );
-    }
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: AppColor.darkerBackground,
@@ -108,12 +89,36 @@ class SignUpPage extends StatelessWidget {
               children: [
                 ...header,
                 ...content,
-                _footer(),
+                SignUpFooter(),
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class SignUpFooter extends StatelessWidget {
+  const SignUpFooter({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Don't have an account? ",
+          style: AppTheme.subtitle.copyWith(fontSize: 12.sp),
+        ),
+        GestureDetector(
+          onTap: () => Get.back(),
+          child: Text(
+            "Sign in",
+            style: AppTheme.hightlightedText,
+          ),
+        )
+      ],
     );
   }
 }

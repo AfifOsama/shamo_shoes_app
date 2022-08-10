@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
             '/': (context) => const SplashScreenPage(),
             '/sign-in': (context) => SignInPage(),
             '/sign-up': (context) => SignUpPage(),
-            '/home': (context) => MainPage(),
+            '/home': (context) => const MainPage(),
+            '/detail-chat': (context) => DetailChatPage(),
           },
         );
       },

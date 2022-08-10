@@ -16,4 +16,6 @@ class AppColor {
   static Color transparent = const Color(0xff302F37);
   static Color productContainer = const Color(0xffECEDEF);
   static Color blackText = const Color(0xff2E2E2E);
+  static Color divider = const Color(0xff2B2939);
+  static Color online = const Color(0xff51C17E);
 }

@@ -1,12 +1,12 @@
 part of 'widgets_part.dart';
 
-class NewArrivalCardWidget extends StatelessWidget {
+class NewArrivalTileWidget extends StatelessWidget {
   final String categoryName;
   final String productName;
   final String imgUrl;
   final String price;
   final Function() onPressed;
-  const NewArrivalCardWidget(
+  const NewArrivalTileWidget(
       {Key? key,
       required this.categoryName,
       required this.productName,

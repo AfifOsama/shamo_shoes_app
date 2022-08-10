@@ -49,25 +49,6 @@ class SignInPage extends StatelessWidget {
       const Spacer(),
     ];
 
-    Widget _footer() {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Don't have an account? ",
-            style: AppTheme.subtitle.copyWith(fontSize: 12.sp),
-          ),
-          GestureDetector(
-            onTap: () => Get.toNamed('/sign-up'),
-            child: Text(
-              "Sign up",
-              style: AppTheme.hightlightedText,
-            ),
-          )
-        ],
-      );
-    }
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: AppColor.darkerBackground,
@@ -79,11 +60,35 @@ class SignInPage extends StatelessWidget {
             children: [
               ...header,
               ...content,
-              _footer(),
+              SignInFooter(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class SignInFooter extends StatelessWidget {
+  const SignInFooter({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Don't have an account? ",
+          style: AppTheme.subtitle.copyWith(fontSize: 12.sp),
+        ),
+        GestureDetector(
+          onTap: () => Get.toNamed('/sign-up'),
+          child: Text(
+            "Sign up",
+            style: AppTheme.hightlightedText,
+          ),
+        )
+      ],
     );
   }
 }
